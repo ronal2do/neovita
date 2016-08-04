@@ -11,26 +11,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="./assets/css/main.css">
     <style>
-		.Apres{
-			color:#fff;
-			margin-top: calc(50vh - 130px);
-			width: 100vw;
-			max-width: 100vw;
-		}
-		svg:not(#Logo){
-			padding-top: 10px;
-		}
-		.Filtro{
-			padding:25px 0;
-		}
-		a.Filtro-Item{
-			color: #fff;
-    		border: solid 2px #fff;
-    		width: 25px;
-    		height: 25px;
-    		padding-left: 5px;
-    		padding-right: 5px;
-		}
 		.example-animate-container {
 		  background:white;
 		  border:1px solid black;
@@ -235,10 +215,42 @@
 	        </ul>
 	        <ul class="nav navbar-nav pull-xs-right">
 	          <li class="nav-item">
-	            <a class="nav-item nav-link" ng-click="changeLanguage('br')">[< br >]</a>
+	            <a class="nav-item nav-link" href ng-click="changeLanguage('br')">
+					 <svg class="translate" version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="21px" xml:space="preserve">
+						<style type="text/css">
+							.st0{fill:#FFFFFF;}
+						</style>
+							<g>
+								<g>
+									<path class="st0" d="M12,9c0,1-0.3,1.8-1,2.3s-1.6,0.8-2.8,0.8H7.8L7.2,15H4.9l1.8-8.6h2.2c1,0,1.8,0.2,2.3,0.7S12,8.2,12,9z
+										 M8.2,10.3h0.4c0.4,0,0.6-0.1,0.9-0.3s0.3-0.5,0.3-0.9c0-0.2-0.1-0.4-0.2-0.6S9.2,8.3,9,8.3H8.6L8.2,10.3z"/>
+									<path class="st0" d="M15.9,15h-2.3L15,8.3h-1.9l0.4-1.9h6l-0.4,1.9h-1.9L15.9,15z"/>
+								</g>
+								<g>
+									<path class="st0" d="M24.1,21.6h-24V-0.2h24V21.6z M1.1,20.6h22V0.8h-22V20.6z"/>
+								</g>
+							</g>
+					</svg>
+	            </a>
 	          </li>
 	          <li class="nav-item">
-	            <a class="nav-item nav-link" ng-click="changeLanguage('en')">[< en >]</a>
+	            <a class="nav-item nav-link" href ng-click="changeLanguage('en')">
+	            	<svg class="translate" version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="21px" xml:space="preserve">
+						<style type="text/css">
+							.st0{fill:#FFFFFF;}
+						</style>
+							<g>
+								<g>
+									<path class="st0" d="M8.7,15H3.6l1.8-8.6h5.1l-0.4,1.9H7.4L7.1,9.6h2.6l-0.4,1.9H6.7l-0.3,1.6h2.8L8.7,15z"/>
+									<path class="st0" d="M17.9,15h-2.7l-1.7-6h0c-0.1,1.1-0.2,2-0.3,2.4L12.4,15h-2l1.8-8.6h2.7l1.7,5.8h0.1c0.1-0.9,0.2-1.6,0.3-2.2
+										l0.8-3.6h2L17.9,15z"/>
+								</g>
+								<g>
+									<path class="st0" d="M23.7,21.6h-24V-0.2h24V21.6z M0.7,20.6h22V0.8h-22V20.6z"/>
+								</g>
+							</g>
+					</svg>
+				 </a>
 	          </li>
 	        </ul>
 
@@ -246,6 +258,7 @@
 	    </nav>
 	  </div>
 	</header>
+
   	<section class="Hero" id="home">
   		<div class="text-xs-center">
   			<div class="Apres" style="z-index:2; position:absolute;">
@@ -635,6 +648,9 @@
   		<div class="Losango text-xs-center">
   			<span class="Salmao"></span>
   		</div>
+  		<div class="Hortela text-xs-center">
+  			<span ></span>
+  		</div>
   	</section>
 
   	<section class="Servicos" id="empresa">
@@ -653,6 +669,7 @@
   				</p>
   			</div>
   			<div class="blocos" style="max-width:100%;">
+  				<div class="bloco"></div>
   				<div class="bloco"></div>
   				<div class="bloco"></div>
   				<div class="bloco"></div>
@@ -812,8 +829,12 @@
 
   		</div>
   		<div class="Social">
-  			<i class="fa fa-facebook-official fa-fw fa-3x"></i>
-  			<i class="fa fa-instagram fa-fw fa-3x"></i>
+			<a href="https://www.facebook.com/neovitafoods" target="_blank" style="color:#2E1D1F">
+  				<i class="fa fa-facebook-official fa-fw fa-3x"></i>
+  			</a>
+			<a href="https://www.instagram.com/neovitafoods/" target="_blank" style="color:#2E1D1F">
+  				<i class="fa fa-instagram fa-fw fa-3x"></i>
+  			</a>
   		</div>
   		<div class="copy">{{ 'COPYRIGHT' | translate }}</div>
   	</footer>
@@ -823,11 +844,19 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
     <script src="./assets/js/angular.js"></script>
     <script src="./assets/js/angular-translate.min.js"></script>
+    <script src="./assets/js/plax.js"></script>
     <script>
     	$('.carousel').carousel({
 		  interval: 1500
 		})
+
+      $(document).ready(function () {
+        $('.Hortela span').plaxify({"xRange":40,"yRange":40})
+        $.plax.enable()
+      })
+    
     </script>
+
     <script>
 		$(function() {
 		  $('a[href*="#"]:not([href="#"])').click(function() {
