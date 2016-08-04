@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
   <head>
     <!-- Required meta tags always come first -->
     <meta charset="utf-8">
@@ -33,7 +33,7 @@
 		}
     </style>
   </head>
-  <body>
+  <body ng-controller="Ctrl">
 	<header class="navbar navbar-light navbar-fixed-top bd-navbar">
 	  <div class="container">
 	    <nav>
@@ -185,28 +185,28 @@
 				</a>
 	          </li>
 	          <li class="nav-item" style="margin-left:40px;">
-	            <a class="nav-item nav-link active" href="#home" >Home</a>
+	            <a class="nav-item nav-link" href="#home" >Home</a>
 	          </li>
 	          <li class="nav-item" style="margin-left:40px;">
-	            <a class="nav-item nav-link " href="#institucional" >Institucional</a>
+	            <a class="nav-item nav-link " href="#institucional" >{{ 'INSTITUCIONAL' | translate }}</a>
 	          </li>
 	          <li class="nav-item" style="margin-left:40px;">
-	            <a class="nav-item nav-link " href="#empresa" >Empresa</a>
+	            <a class="nav-item nav-link " href="#empresa" >{{ 'EMPRESA' | translate }}</a>
 	          </li>
 	          <li class="nav-item" style="margin-left:40px;">
-	            <a class="nav-item nav-link" href="#produtos">PRODUTOS</a>
+	            <a class="nav-item nav-link" href="#produtos">{{ 'PRODUTOS' | translate }}</a>
 	          </li>
 	          <li class="nav-item" style="margin-left:40px;">
-	            <a class="nav-item nav-link" href="#contato">COntato</a>
+	            <a class="nav-item nav-link" href="#contato">{{ 'CONTATO' | translate }}</a>
 	          </li>
 	         
 	        </ul>
 	        <ul class="nav navbar-nav pull-xs-right">
 	          <li class="nav-item">
-	            <a class="nav-item nav-link" href="#produtos">[<>]</a>
+	            <a class="nav-item nav-link" ng-click="changeLanguage('br')">[< br >]</a>
 	          </li>
 	          <li class="nav-item">
-	            <a class="nav-item nav-link" href="#contato">[<>]</a>
+	            <a class="nav-item nav-link" ng-click="changeLanguage('en')">[< en >]</a>
 	          </li>
 	        </ul>
 
@@ -289,8 +289,8 @@
 					</svg>
 	  			</h1>
 	    		<h5 class="slogan text-xs-center">
-		    		A primeira empresa exportadora do <br/>
-					Brasil com foco em produtos orgânicos
+	    			{{ 'HEADLINE' | translate }} <br/>
+	    			{{ 'HEADLINE2' | translate }}
 				</h5>
   			</div>
   		</div>
@@ -441,8 +441,7 @@
 				</svg>
   			</div>
   			<div class="Segmento">
-				<svg version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-					 viewBox="0 0 80.8 75.4" style="enable-background:new 0 0 80.8 75.4;max-width:80px;" xml:space="preserve">
+				<svg version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 80.8 75.4" style="enable-background:new 0 0 80.8 75.4;max-width:80px;" xml:space="preserve">
 					<style type="text/css">
 						.st0{fill:#FFFFFF;}
 					</style>
@@ -468,16 +467,11 @@
 	  		<div class="">
 	  			<div class="col-sm-6 Flex">
 		  			<span class="Folha"></span>
-		  			<h1>Institucional</h1>
+		  			<h1>{{ 'INSTITUCIONAL' | translate }}</h1>
 	  			</div>
 	  			<div class="col-sm-6">
-	  				<p>
-	  					Envolvida no mundo do agronegócio desde 2000, a NeoVita Foods construiu uma vasta e integrada cadeia de suprimentos da fazenda, processamento até a exportacao de produtos orgânicos e não-orgânicos para o mercado alimentício e de cosmético.
-	  					</p>
-	  				<p>
-	  					É a primeira empresa exportadora do Brasil com foco em produtos orgânicos e através de um alto padrão de qualidade de serviços e produtos, além do atendimento das mais exigentes normas e certificações internacionais, a NeoVita Foods é o parceiro ideal para seus negócios.
-
-	  				</p>
+	  				<p>{{ 'INSTITUCIONALPARA' | translate }}</p>
+	  				<p>{{ 'INSTITUCIONALPARASEG' | translate }}</p>
 	  				<br>
 	  			</div>
 	  		</div>
@@ -490,7 +484,7 @@
     <section class="Principios">
   		<div class="container">
   			<div class="row text-xs-center">
- 	  			<h1>Princípios</h1>				
+ 	  			<h1>{{ 'PRINCIPIOS' | translate }}</h1>				
   			</div>		
   			<div class="col-sm-4 text-xs-center">
 	  			<div class="Box">
@@ -521,19 +515,16 @@
 							</g>
 						</g>
 					</svg>
-
-	  				<h3>Missão</h3>
-	  				<p>
-	  					Promover a melhoria do bem estar das pessoas por meio de produtos naturais diferenciados, apoiando o comércio justo e suportando as comunidades locais.
-	  				</p>
+	  				<h3>{{ 'MISSAO' | translate }}</h3>
+	  				<p>{{ 'MISSAOFRASE' | translate }}</p>
 	  			</div>
   			</div>
   			<div class="col-sm-4 text-xs-center">
 	  			<div class="Box">
 		  			<svg version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 80.8 75.4" style="enable-background:new 0 0 80.8 75.4; max-width:80px;" xml:space="preserve">
-					<style type="text/css">
-						.st0{fill:#FFFFFF;}
-					</style>
+						<style type="text/css">
+							.st0{fill:#FFFFFF;}
+						</style>
 						<g id="XMLID_2_">
 							<g id="XMLID_9_">
 								<g id="XMLID_22_">
@@ -572,10 +563,8 @@
 							</g>
 						</g>
 					</svg>
-	  				<h3>Visão</h3>
-	  				<p>
-	  					Ser referência na agregação de valor de produtos naturais promovendo equilíbrio social e ambiental na comunidade que estamos inseridos.
-	  				</p>
+	  				<h3>{{ 'VISAO' | translate }}</h3>
+	  				<p>{{ 'VISAOFRASE' | translate }}</p>
 	  			</div>
   			</div>
   			<div class="col-sm-4 text-xs-center">
@@ -603,11 +592,10 @@
 					</g>
 				</svg>
 
-	  			<h3>VALORES</h3>
-	  				<p>
-	  					Equilíbrio Social e Ambiental <br/>
-						Foco no cliente <br/>
-						Melhoria contínua
+	  			<h3>{{ 'VALORES' | translate }}</h3>
+	  				<p>{{ 'VALORES2' | translate }}<br/>
+						{{ 'VALORES3' | translate }}<br/>
+						{{ 'VALORES4' | translate }}
 	  				</p>
 	  			</div>
   			</div>
@@ -624,12 +612,12 @@
 	  			<img src="./assets/imgs/fazendinha.png" alt="fazendinha" style="max-width: 100%;">
   			</div>
   			<div class="col-sm-6">
-  				<h1>Empresa</h1>
+  				<h1>{{ 'EMPRESA' | translate }}</h1>
   				<p>
-  					A Neovita foods acumula experiências desde 2000 por meio dos seus sócios. Contamos com uma grande e vasta rede de produtores e forncedores por toda América do Sul e ainda possui três propriedades rurais no Brasil que suportam suas operações.
+  				   {{ 'EMPRESAPARA' | translate }}
   				</p>
   				<p>
-  					Somos especializados no fornecimento de frutas e legumes processados, sempre prezando pela alta qualidade nos produtos, além de também prezar por uma atuação responsável, ética e transparente.
+  					{{ 'EMPRESAPARASEG' | translate }}
   				</p>
   			</div>
   			<div class="blocos" style="max-width:100%;">
@@ -648,12 +636,11 @@
   	</section>
 
 	<section class="Produtos" id="produtos">
-
   		<div class="container">		
   			<div class="row">
   				<div style="padding-top:60px;"></div>
   				<div class="col-sm-3"><span class="Castanha"></span></div>
-  				<div class="col-sm-3"><h1>Produtos</h1></div>
+  				<div class="col-sm-3"><h1>{{ 'PRODUTOS' | translate }}</h1></div>
   				<div class="col-sm-6"></div>
   			</div>
   			<div class="col-sm-9 offset-sm-3" style="z-index:10;">
@@ -680,7 +667,11 @@
 	  					<p class="Tipo">Tipo</p>
 	  					<p class="Desc">Descrição</p>
 	  				</div>
-
+	  				<div class="Produto">
+	  					<h5 class="Titulo">Produto</h5>
+	  					<p class="Tipo">Tipo</p>
+	  					<p class="Desc">Descrição</p>
+	  				</div>
   				</div>
   			</div>
   		</div>
@@ -693,12 +684,12 @@
 	  		</div>
 	  		<div class="col-sm-5">
 	  			<div class="form-padding"></div>
-	  			<h1 class="text-xs-right">Contato</h1>
+	  			<h1 class="text-xs-right">{{ 'CONTATO' | translate }}</h1>
 				<form action="">
-					<input class="form-control form-control-lg" type="text" placeholder="Nome">
-					<input class="form-control form-control-lg" type="email" placeholder="Email">
-					<textarea class="form-control form-control-lg" type="text" rows="3" placeholder="Mensagem"></textarea>
-					<input class="btn btn-block form-control-lg btn-submit" type="submit">
+					<input class="form-control form-control-lg" type="text" placeholder="{{ 'NOME' | translate }}">
+					<input class="form-control form-control-lg" type="email" placeholder="{{ 'EMAIL' | translate }}">
+					<textarea class="form-control form-control-lg" type="text" rows="3" placeholder="{{ 'MENSAGEM' | translate }}"></textarea>
+					<input class="btn btn-block form-control-lg btn-submit" type="submit" value="{{ 'SEND' | translate }}">
 				</form>
 				<br>
 	  		</div>
@@ -779,19 +770,35 @@
   			<i class="fa fa-facebook-official fa-fw fa-3x"></i>
   			<i class="fa fa-instagram fa-fw fa-3x"></i>
   		</div>
-  		<div class="copy">© 2016 NEOVITA FOODS. TODOS OS DIREITOS RESERVADOS.</div>
+  		<div class="copy">{{ 'COPYRIGHT' | translate }}</div>
   	</footer>
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
+    <script src="./assets/js/angular.js"></script>
+    <script src="./assets/js/angular-translate.min.js"></script>
     <script>
     	$('.carousel').carousel({
 		  interval: 1500
 		})
     </script>
     <script>
-    	jQuery(function(){if(jQuery("a[href*=#]:not([href=#])").click(function(){if(location.pathname.replace(/^\//,"")==this.pathname.replace(/^\//,"")&&location.hostname==this.hostname){var e=jQuery(this.hash);if(e=e.length?e:jQuery("[name="+this.hash.slice(1)+"]"),e.length)return jQuery("html,body").animate({scrollTop:e.offset().top-50},1e3),!1}}),jQuery(location.href.split("#")[1])){var e=jQuery("#"+location.href.split("#")[1]);if(e.length)return jQuery("html,body").animate({scrollTop:e.offset().top-125},1e3),!1}})
+		$(function() {
+		  $('a[href*="#"]:not([href="#"])').click(function() {
+		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		      var target = $(this.hash);
+		      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		      if (target.length) {
+		        $('html, body').animate({
+		          scrollTop: target.offset().top
+		        }, 1000);
+		        return false;
+		      }
+		    }
+		  });
+		});
     </script>
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>

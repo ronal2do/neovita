@@ -285,8 +285,8 @@ a.Filtro-Item{
 @media (min-width: 544px) { ... }
 
 @media (min-width: 768px) { 
-	section{
-	height: 100vh;
+	section:not(#produtos){
+		height: 100vh;
 	}
 	h1{
 		font-size: 7.5em;
