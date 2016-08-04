@@ -282,6 +282,11 @@ a.Filtro-Item{
 	padding-left: 5px;
 	padding-right: 5px;
 }
+.Produto {
+    position: relative;
+    float: left;
+    margin: 15px 15px;
+}
 @media (min-width: 544px) { ... }
 
 @media (min-width: 768px) { 
