@@ -31,9 +31,41 @@
     		padding-left: 5px;
     		padding-right: 5px;
 		}
+		.example-animate-container {
+		  background:white;
+		  border:1px solid black;
+		  list-style:none;
+		  margin:0;
+		  padding:0 10px;
+		}
+
+		.animate-repeat {
+		  list-style:none;
+		  box-sizing:border-box;
+		}
+
+		.animate-repeat.ng-move,
+		.animate-repeat.ng-enter,
+		.animate-repeat.ng-leave {
+		  transition:all linear 0.5s;
+		}
+
+		.animate-repeat.ng-leave.ng-leave-active,
+		.animate-repeat.ng-move,
+		.animate-repeat.ng-enter {
+		  opacity:0;
+		  max-height:0;
+		}
+
+		.animate-repeat.ng-leave,
+		.animate-repeat.ng-move.ng-move-active,
+		.animate-repeat.ng-enter.ng-enter-active {
+		  opacity:1;
+		  max-height:30px;
+		}
     </style>
   </head>
-  <body ng-controller="Ctrl">
+  <body ng-controller="Ctrl" ng-cloak>
 	<header class="navbar navbar-light navbar-fixed-top bd-navbar">
 	  <div class="container">
 	    <nav>
@@ -645,81 +677,47 @@
   			</div>
   			<div class="col-sm-9 offset-sm-3" style="z-index:10;">
   			  	<div style="padding-top:120px;"></div>
+				<input type="search" ng-model="busca" class="form-control form-control-lg" placeholder="{{ 'BUSCAR' | translate }}">
   			  	<div class="Filtro">
-  			  		<a class="Filtro-Item" href="#">A</a>	
-  			  		<a class="Filtro-Item" href="#">B</a>	
-  			  		<a class="Filtro-Item" href="#">C</a>	
-  			  		<a class="Filtro-Item" href="#">D</a>	
-  			  		<a class="Filtro-Item" href="#">E</a>	
-  			  		<a class="Filtro-Item" href="#">F</a>	
-  			  		<a class="Filtro-Item" href="#">G</a>	
-  			  		<a class="Filtro-Item" href="#">H</a>	
-  			  		<a class="Filtro-Item" href="#">I</a>	
-  			  		<a class="Filtro-Item" href="#">J</a>	
-  			  		<a class="Filtro-Item" href="#">K</a>	
-  			  		<a class="Filtro-Item" href="#">L</a>	
-  			  		<a class="Filtro-Item" href="#">M</a>	
-  			  		<a class="Filtro-Item" href="#">N</a>	
-  			  		<a class="Filtro-Item" href="#">O</a>	
-  			  		<a class="Filtro-Item" href="#">P</a>	
-  			  		<a class="Filtro-Item" href="#">Q</a>	
-  			  		<a class="Filtro-Item" href="#">R</a>	
-  			  		<a class="Filtro-Item" href="#">S</a>	
-  			  		<a class="Filtro-Item" href="#">T</a>	
-  			  		<a class="Filtro-Item" href="#">U</a>	
-  			  		<a class="Filtro-Item" href="#">V</a>	
-  			  		<a class="Filtro-Item" href="#">W</a>	
-  			  		<a class="Filtro-Item" href="#">X</a>	
-  			  		<a class="Filtro-Item" href="#">Y</a>	
-  			  		<a class="Filtro-Item" href="#">Z</a>	
+  			  		<a class="Filtro-Item" href ng-click="letra = {'index': ''}">Todas</a>	
+  			  		<a class="Filtro-Item" href ng-click="letra = {'index': 'A'}">A</a>	
+  			  		<a class="Filtro-Item" href ng-click="letra = {'index': 'B'}">B</a>	
+  			  		<a class="Filtro-Item" href ng-click="letra = {'index': 'C'}">C</a>	
+  			  		<a class="Filtro-Item" href ng-click="letra = {'index': 'D'}">D</a>	
+  			  		<a class="Filtro-Item" href ng-click="letra = {'index': 'E'}">E</a>	
+  			  		<a class="Filtro-Item" href ng-click="letra = {'index': 'F'}">F</a>	
+  			  		<a class="Filtro-Item" href ng-click="letra = {'index': 'G'}">G</a>	
+  			  		<a class="Filtro-Item" href ng-click="letra = {'index': 'H'}">H</a>	
+  			  		<a class="Filtro-Item" href ng-click="letra = {'index': 'I'}">I</a>	
+  			  		<a class="Filtro-Item" href ng-click="letra = {'index': 'J'}">J</a>	
+  			  		<a class="Filtro-Item" href ng-click="letra = {'index': 'K'}">K</a>	
+  			  		<a class="Filtro-Item" href ng-click="letra = {'index': 'L'}">L</a>	
+  			  		<a class="Filtro-Item" href ng-click="letra = {'index': 'M'}">M</a>	
+  			  		<a class="Filtro-Item" href ng-click="letra = {'index': 'N'}">N</a>	
+  			  		<a class="Filtro-Item" href ng-click="letra = {'index': 'O'}">O</a>	
+  			  		<a class="Filtro-Item" href ng-click="letra = {'index': 'P'}">P</a>	
+  			  		<a class="Filtro-Item" href ng-click="letra = {'index': 'Q'}">Q</a>	
+  			  		<a class="Filtro-Item" href ng-click="letra = {'index': 'R'}">R</a>	
+  			  		<a class="Filtro-Item" href ng-click="letra = {'index': 'S'}">S</a>	
+  			  		<a class="Filtro-Item" href ng-click="letra = {'index': 'T'}">T</a>	
+  			  		<a class="Filtro-Item" href ng-click="letra = {'index': 'U'}">U</a>	
+  			  		<a class="Filtro-Item" href ng-click="letra = {'index': 'V'}">V</a>	
+  			  		<a class="Filtro-Item" href ng-click="letra = {'index': 'W'}">W</a>	
+  			  		<a class="Filtro-Item" href ng-click="letra = {'index': 'X'}">X</a>	
+  			  		<a class="Filtro-Item" href ng-click="letra = {'index': 'Y'}">Y</a>	
+  			  		<a class="Filtro-Item" href ng-click="letra = {'index': 'Z'}">Z</a>	
   			  	</div>
+
+				
   			  	<div class="row">
-	  				<div class="Produto">
-	  					<h5 class="Titulo">Produto</h5>
-	  					<p class="Tipo">Tipo</p>
-	  					<p class="Desc">Descrição</p>
+	  				<div class="Produto animate-repeat" ng-repeat="produto in lista.produtos | filter:busca | filter:letra " ng-cloak>
+	  					<h5 class="Titulo">{{ produto.nome }}</h5>
+	  					<p class="Tipo">{{ produto.name }}</p>
+	  					<p class="Desc">{{ produto.tipo }}</p>
 	  				</div>
-	  				<div class="Produto">
-	  					<h5 class="Titulo">Produto</h5>
-	  					<p class="Tipo">Tipo</p>
-	  					<p class="Desc">Descrição</p>
-	  				</div>
-	  				<div class="Produto">
-	  					<h5 class="Titulo">Produto</h5>
-	  					<p class="Tipo">Tipo</p>
-	  					<p class="Desc">Descrição</p>
-	  				</div>
-	  				<div class="Produto">
-	  					<h5 class="Titulo">Produto</h5>
-	  					<p class="Tipo">Tipo</p>
-	  					<p class="Desc">Descrição</p>
-	  				</div>
-	  				<div class="Produto">
-	  					<h5 class="Titulo">Produto</h5>
-	  					<p class="Tipo">Tipo</p>
-	  					<p class="Desc">Descrição</p>
-	  				</div>
-	  				<div class="Produto">
-	  					<h5 class="Titulo">Produto</h5>
-	  					<p class="Tipo">Tipo</p>
-	  					<p class="Desc">Descrição</p>
-	  				</div>
-	  				<div class="Produto">
-	  					<h5 class="Titulo">Produto</h5>
-	  					<p class="Tipo">Tipo</p>
-	  					<p class="Desc">Descrição</p>
-	  				</div>
-	  				<div class="Produto">
-	  					<h5 class="Titulo">Produto</h5>
-	  					<p class="Tipo">Tipo</p>
-	  					<p class="Desc">Descrição</p>
-	  				</div>
-	  				<div class="Produto">
-	  					<h5 class="Titulo">Produto</h5>
-	  					<p class="Tipo">Tipo</p>
-	  					<p class="Desc">Descrição</p>
-	  				</div>
+
   				</div>
+  				<br><br>
   			</div>
   		</div>
   	</section>
