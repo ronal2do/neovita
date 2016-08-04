@@ -196,7 +196,7 @@ section{
 .Segmento{
 	width: calc(100vw / 5);
 	text-align: center;
-	height: 100px;
+	height: 75px;
 	background: #2E1D1F;
 	color:#fff;
 }
@@ -296,6 +296,7 @@ svg:not(#Logo):not(.translate){
 }
 .Filtro{
 	padding:25px 0;
+	line-height: 30px;
 }
 a.Filtro-Item{
 	color: #fff;
@@ -309,10 +310,15 @@ a.Filtro-Item{
  	position: relative;
     float: left;
     margin: 10px 15px;
-    width: 165px;
-    height: 141px;
+    width: 114px;
+    height: 153px;
 }
-
+.Segmento:nth-child(1) svg{
+	max-width: 65%;
+}
+.Segmento svg{
+	max-width:85%;
+}
 @media (min-width: 544px) { ... }
 
 @media (min-width: 768px) { 
@@ -379,7 +385,26 @@ a.Filtro-Item{
 	.form-padding{
 		margin-top: 25vh;
 	}	
-
+	.Produto {
+	 	position: relative;
+	    float: left;
+	    margin: 10px 15px;
+	    width: 165px;
+	    height: 141px;
+	}
+	.Segmento{
+		width: calc(100vw / 5);
+		text-align: center;
+		height: 100px;
+		background: #2E1D1F;
+		color:#fff;
+	}
+	.Segmento:nth-child(1) svg{
+		max-width:62px;
+	}
+	.Segmento svg{
+		max-width:80px;
+	}
 }
 
 @media (min-width: 992px) { ... }
