@@ -96,7 +96,7 @@ section{
 }
 .Institucional{
 	background-color:#c5c5c5; 
-	background-image: url('../imgs/empresa.png');
+	background-image: url('../imgs/empresa.jpg');
 	background-size: cover;
 	background-position: center;
 	color:#fff;
@@ -104,7 +104,7 @@ section{
 }
 
 .Principios{
-	background-image: url('../imgs/principios.png');
+	background-image: url('../imgs/principios.jpg');
 	background-size: cover;
 	background-position: center;
 	color: #fff;
@@ -245,6 +245,25 @@ section{
     margin-bottom: -125px;
     animation: flutuar 3s ease-in-out infinite; -webkit-animation: flutuar 3s ease-in-out infinite; -moz-animation: flutuar 3s ease-in-out infinite; -ms-animation: flutuar 3s ease-in-out infinite;
 }
+.Folhinha{
+	display: inline-flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    margin-left: calc(30% - 25px);
+    margin-top: -200px;
+}
+.Folhinha span{
+	background-image: url('../imgs/folhas.png');
+	background-size: cover;
+	background-position: center;
+	width: 250px;
+    height: 250px;
+    margin-right: 30px;
+    margin-bottom: 1395px;
+  }
+
 .Verde{
 	background: #9DB950;
 }
@@ -356,6 +375,9 @@ a.Filtro-Item{
 .bloco:nth-child(8){
 	background-image: url('../imgs/certificacoes/utz.jpeg');
 }
+.bloco:nth-child(9){
+	background-image: url('../imgs/certificacoes/obr.png');
+}
 
 @media (min-width: 544px) { ... }
 
@@ -392,7 +414,7 @@ a.Filtro-Item{
 		background-size: contain;
     	background-repeat: no-repeat;
     	background-position: center;
-		margin: 15px;
+		margin: 10px;
 	}
 	.bloco:nth-child(1){
 		background-image: url('../imgs/certificacoes/eu-organic.jpeg');
@@ -417,6 +439,9 @@ a.Filtro-Item{
 	}
 	.bloco:nth-child(8){
 		background-image: url('../imgs/certificacoes/utz.jpeg');
+	}
+	.bloco:nth-child(9){
+		background-image: url('../imgs/certificacoes/obr.png');
 	}
 
 	.form-padding{
