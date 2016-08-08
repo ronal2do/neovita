@@ -245,24 +245,7 @@ section{
     margin-bottom: -125px;
     animation: flutuar 3s ease-in-out infinite; -webkit-animation: flutuar 3s ease-in-out infinite; -moz-animation: flutuar 3s ease-in-out infinite; -ms-animation: flutuar 3s ease-in-out infinite;
 }
-.Folhinha{
-	display: inline-flex;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-    margin-left: calc(30% - 25px);
-    margin-top: -200px;
-}
-.Folhinha span{
-	background-image: url('../imgs/folhas.png');
-	background-size: cover;
-	background-position: center;
-	width: 250px;
-    height: 250px;
-    margin-right: 30px;
-    margin-bottom: 995px;
-  }
+
 
 .Verde{
 	background: #9DB950;
@@ -467,6 +450,25 @@ a.Filtro-Item{
 	.Segmento svg{
 		max-width:80px;
 	}
+	.Folhinha{
+		display: inline-flex;
+	    position: absolute;
+	    bottom: 0;
+	    left: 0;
+	    z-index: 1;
+	    margin-left: calc(30% - 25px);
+	    margin-top: -200px;
+	}
+	.Folhinha span{
+		background-image: url('../imgs/folhas.png');
+		background-size: cover;
+		background-position: center;
+		width: 250px;
+	    height: 250px;
+	    margin-right: 30px;
+	    margin-bottom: 995px;
+	  }
+
 }
 
 @media (min-width: 992px) { ... }
